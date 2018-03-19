@@ -1,0 +1,31 @@
+server:
+  address: 0.0.0.0
+  port: 8084
+
+spring:
+  application:
+    name: client
+
+  cloud:
+    consul:
+      host: 192.168.1.45
+      port: 80
+
+      discovery:
+        preferIpAddress: true
+        heartbeat:
+          enabled: true
+          ttlValue: 60
+          ttlUnit: s
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.cloud.sleuth.log: TRACE
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
+    org.springframework.cloud.consul: TRACE
+
+
+feign:
+  hystrix:
+    enabled: false
