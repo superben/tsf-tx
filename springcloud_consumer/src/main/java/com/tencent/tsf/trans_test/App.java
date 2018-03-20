@@ -20,7 +20,7 @@ public class App {
 
         Consumer consumer = new Consumer();
         for (int i = 0; i < Integer.MAX_VALUE; i++) {
-        //for (int i = 0; i < 1; i++) {
+//        for (int i = 0; i < 3; i++) {
             try {
                 OrderParams orderParams = new OrderParams();
                 orderParams.id = Integer.toString(i);
@@ -33,7 +33,7 @@ public class App {
 
                 logger.info("id: " + orderParams.id + " response: " + ret);
 
-                Thread.sleep(1000);
+                Thread.sleep(30000);
             } catch (Exception e) {
                 e.printStackTrace();
             }

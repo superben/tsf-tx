@@ -32,3 +32,5 @@ logging:
     org.springframework.cloud.sleuth.log: TRACE
     org.springframework.web.servlet.DispatcherServlet: DEBUG
     org.springframework.cloud.consul: TRACE
+
+  file: /var/log/tsf/demo/service1.log
