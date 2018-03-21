@@ -26,8 +26,8 @@ public class CallService1 {
     }
 
     @TsfTcc(serviceName = "service1", type = TransactionType.BRANCH, confirmMethodName = "service1Confirm", cancelMethodName = "service1Cancel")
-    public void service1Try(String txId, long branchId, TestBody params) throws Throwable {
-        callService1.service1.service1Try(txId, branchId, params);
+    public String service1Try(String txId, long branchId, TestBody params) throws Throwable {
+        return callService1.service1.service1Try(txId, branchId, params);
     }
 
     public String service1Confirm(String txId, long branchId, TestBody params) throws Throwable {
