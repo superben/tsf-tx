@@ -25,6 +25,7 @@ logging:
     org.springframework.web.servlet.DispatcherServlet: DEBUG
     org.springframework.cloud.consul: TRACE
 
+  file: /var/log/tsf/demo/client.log
 
 feign:
   hystrix:
